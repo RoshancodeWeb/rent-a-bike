@@ -32,10 +32,16 @@ export default function HomePage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-              <Home className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-green-800">RentEasy</span>
+             <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/logo.jpg"
+              alt="RentEasy Logo"
+              width={60}
+              height={60}
+              className="w-20 h-20 rounded-lg object-cover"
+            />
+            
+          </Link>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#" className="text-gray-600 hover:text-green-600">
