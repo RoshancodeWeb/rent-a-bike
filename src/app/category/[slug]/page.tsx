@@ -201,10 +201,12 @@ const sampleProducts: Record<string, Product[]> = {
   ],
 };
 
-
-
-export default function CategoryPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const category = categoryData[slug as keyof typeof categoryData];
   const products = sampleProducts[slug as keyof typeof sampleProducts] || [];
 
