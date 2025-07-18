@@ -201,13 +201,9 @@ const sampleProducts: Record<string, Product[]> = {
   ],
 };
 
-interface CategoryPageProps {
-  params: {
-    slug: string;
-  };
-}
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+
+export default function CategoryPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const category = categoryData[slug as keyof typeof categoryData];
   const products = sampleProducts[slug as keyof typeof sampleProducts] || [];
